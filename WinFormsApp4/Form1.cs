@@ -109,12 +109,12 @@ namespace WinFormsApp4
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
-            if(!timer1.Enabled) return;
+            if (!timer1.Enabled) return;
             if (e.Button == MouseButtons.Left)
             {
                 var x = e.Location.X / resolution;
                 var y = e.Location.Y / resolution;
-                var validationPassed=ValidationMousePosition(x, y);
+                var validationPassed = ValidationMousePosition(x, y);
                 if (validationPassed)
                     field[x, y] = true;
             }
@@ -130,7 +130,7 @@ namespace WinFormsApp4
 
         private bool ValidationMousePosition(int x, int y)
         {
-            return x>=0&&y>=0&&x<columns && y<rows;
+            return x >= 0 && y >= 0 && x < columns && y < rows;
         }
     }
 }
